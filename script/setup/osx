@@ -6,13 +6,21 @@ python_version() {
   python -V 2>&1
 }
 
+python3_version() {
+  python3 -V 2>&1
+}
+
 openssl_version() {
   python -c "import ssl; print ssl.OPENSSL_VERSION"
 }
 
-desired_python_version="2.7.12"
-desired_python_brew_version="2.7.12"
-python_formula="https://raw.githubusercontent.com/Homebrew/homebrew-core/737a2e34a89b213c1f0a2a24fc1a3c06635eed04/Formula/python.rb"
+desired_python_version="2.7.14"
+desired_python_brew_version="2.7.14_2"
+python_formula="https://raw.githubusercontent.com/Homebrew/homebrew-core/85933fd41e5e28fbdc9bf6e85a214dadb8bd5914/Formula/python.rb"
+
+desired_python3_version="3.6.4"
+desired_python3_brew_version="3.6.4_2"
+python3_formula="https://raw.githubusercontent.com/Homebrew/homebrew-core/b4e69a9a592232fa5a82741f6acecffc2f1d198d/Formula/python3.rb"
 
 desired_openssl_version="1.0.2j"
 desired_openssl_brew_version="1.0.2j"
@@ -34,6 +42,16 @@ if !(python_version | grep "$desired_python_version"); then
   brew install "$python_formula"
   brew switch python "$desired_python_brew_version"
 fi
+
+if !(python3_version | grep "$desired_python3_version"); then
+  if brew list | grep python3; then
+    brew unlink python3
+  fi
+
+  brew install "$python3_formula"
+  brew switch python3 "$desired_python3_brew_version"
+fi
+
 
 if !(openssl_version | grep "$desired_openssl_version"); then
   if brew list | grep openssl; then
