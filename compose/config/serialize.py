@@ -12,6 +12,7 @@ from compose.const import COMPOSEFILE_V3_0 as V3_0
 from compose.const import COMPOSEFILE_V3_2 as V3_2
 from compose.const import COMPOSEFILE_V3_4 as V3_4
 from compose.const import COMPOSEFILE_V3_5 as V3_5
+from compose.const import COMPOSEFILE_V3_6 as V3_6
 
 
 def serialize_config_type(dumper, data):
@@ -85,7 +86,7 @@ def denormalize_config(config, image_digests=None):
 def v3_introduced_name_key(key):
     if key == 'volumes':
         return V3_4
-    return V3_5
+    return V3_6
 
 
 def serialize_config(config, image_digests=None):

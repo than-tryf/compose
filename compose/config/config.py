@@ -18,6 +18,7 @@ from ..const import COMPOSEFILE_V1 as V1
 from ..const import COMPOSEFILE_V2_1 as V2_1
 from ..const import COMPOSEFILE_V3_0 as V3_0
 from ..const import COMPOSEFILE_V3_4 as V3_4
+from ..const import COMPOSEFILE_V3_6 as V3_6
 from ..utils import build_string_dict
 from ..utils import parse_bytes
 from ..utils import parse_nanoseconds_int

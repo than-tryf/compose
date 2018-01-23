@@ -35,6 +35,8 @@ COMPOSEFILE_V3_3 = ComposeVersion('3.3')
 COMPOSEFILE_V3_4 = ComposeVersion('3.4')
 COMPOSEFILE_V3_5 = ComposeVersion('3.5')
 
+COMPOSEFILE_V3_6 = ComposeVersion('3.6')
+
 API_VERSIONS = {
     COMPOSEFILE_V1: '1.21',
     COMPOSEFILE_V2_0: '1.22',
@@ -47,6 +49,8 @@ API_VERSIONS = {
     COMPOSEFILE_V3_3: '1.30',
     COMPOSEFILE_V3_4: '1.30',
     COMPOSEFILE_V3_5: '1.30',
+    COMPOSEFILE_V3_6: '1.30',
+
 }
 
 API_VERSION_TO_ENGINE_VERSION = {

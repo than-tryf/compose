@@ -96,6 +96,7 @@ HOST_CONFIG_KEYS = [
     'userns_mode',
     'volumes_from',
     'volume_driver',
+    'monitoring',
 ]
 
 CONDITION_STARTED = 'service_started'
